@@ -295,7 +295,7 @@ Requires=docker.service
 
 [Service]
 ExecStart=/usr/local/bin/kubelet \\
-  --bootstrap-kubeconfig="/var/lib/kubelet/bootstrap-kubeconfig" \\
+  --bootstrap-kubeconfig=/var/lib/kubelet/bootstrap-kubeconfig \\
   --config=/var/lib/kubelet/kubelet-config.yaml \\
   --image-pull-progress-deadline=2m \\
   --kubeconfig=/var/lib/kubelet/kubeconfig \\
